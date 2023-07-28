@@ -32,7 +32,7 @@ const ConversationPage = () => {
             content:values.prompt,
         };
         const newMessages=[...messages,userMessage];
-        const response=await axios.post("/api/converation",{
+        const response=await axios.post("/api/conversation",{
             messages:newMessages,
         });
         setMessages((current)=>[...current,userMessage,response.data]);
